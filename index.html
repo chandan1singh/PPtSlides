@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="custom.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="slide" style="background-color: white;" >
+            <h1 style="margin-top: 60px; margin-left: 20px;">How to Host Website Locally in your system</h1>
+            <h2 style="margin-top: 40px; margin-left: 20px; " >Hosting the website with apache2</h2>
+        </div>
+        <div class="slide" style="background-color: white;"> 
+            <h1>Installing and setting up apache2 in Linux based Machine</h1>
+            <h2 style="margin-top: 40px; margin-left: 20px; " >Apache HTTP Server is a free and open-source web server that delivers web content through the web page.
+                A web server is software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web.
+                Commands to install Apache2 server in ubuntu
+                <br>
+                <br>
+                1. sudo apt install apache2 <br> <br>
+                2. sudo systemctl start apache2
+                </h2>
+        </div>
+        <div class="slide" style="background-color: white;"> 
+            <h1>Copying website file in apache2 default webroot
+                directory
+            </h1>
+            <h2 style="margin-top: 40px; margin-left: 20px; " >
+                1. cp Web_file /var/www/html
+            </h2>
+        </div>
+        <div class="slide" style="background-color: white;">
+            <h1>
+                Changing Default Directory Root of apache2 to your
+                choice of directory
+            </h1>
+            <h3 style="margin-top: 40px; margin-left: 20px; " >
+                1. Update the directory root of apache2.conf
+-> sudo nano /etc/apache2/apache2.conf
+eg. <br>
+2. Update the directory root of sites-available file <br>
+->sudo nano /etc/apache2/sites-available/000-default.conf <br>
+ eg. change to -> Change DocumentRoot as /home/username/directoryName
+            </h3>
+        </div>
+    </main>
+    <div class="nav">
+        <button onclick="goPrev()">Prev</button>
+        <button onclick="goNext()">Next</button>
+    </div>
+    <script src="app.js" ></script>
+</body>
+</html>
